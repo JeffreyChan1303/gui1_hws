@@ -1,0 +1,123 @@
+/* applies border-box sizing that I like to use */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+header,
+hgroup,
+nav,
+footer,
+figure,
+figcaption,
+aside,
+section,
+article {
+  display: block;
+}
+/* adds spacing between window sides, and the main content */
+html {
+  padding: 0 16px;
+}
+/* adds background image to the website, centers the body horizontally, and has width limitations */
+body {
+  background-image: url('ptrbackground.jpg');
+  background-repeat: repeat-x;
+  background-color: #00569f;
+  color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 600px;
+  max-width: 80vw;
+  margin: 16px auto;
+}
+nav ul {
+  font-size: 1.2em;
+  /* makes text bolded and have no list item, not have bulletpoints */
+  list-style-type: none;
+  font-weight: 700;
+}
+nav a:visited,
+nav a:link {
+  /* makes nav links not have underline, and black */
+  text-decoration: none;
+  color: black;
+}
+nav a:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  color: white;
+}
+h2 {
+  color: #3399cc;
+}
+h1,
+h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+#contact {
+  font-size: 90%;
+}
+dt {
+  color: #000033;
+}
+footer {
+  font-family: Georgia, 'Times New Roman', serif;
+  grid-area: footer;
+}
+
+/* adds space on the left and right side, but also makes a white background color */
+footer,
+#content {
+  background-color: white;
+  padding: 0 28px 16px;
+}
+
+/* makes the text wrap around the img, and adds space to the right of the image */
+img {
+  float: left;
+  margin-right: 16px;
+}
+
+/* uses grid for the layout of the website */
+#wrapper {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-areas:
+    'header header'
+    'nav content'
+    'nav footer';
+}
+
+/* assigns position of header to the grid, and add image tot he header and formats it properly */
+header {
+  grid-area: header;
+  background-image: url('sunset.jpg');
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+/* assigns position of the nav in the grid and background color */
+nav {
+  grid-area: nav;
+  background-color: #90c8e3;
+}
+/* assigns poisition of the content to the grid */
+#content {
+  grid-area: content;
+}
+/* makes the bullet points start in the element */
+#content li {
+  list-style-position: inside;
+  list-style-image: url('marker.gif');
+}
+/* makes the .resort font bolded and a semi-blue color */
+.resort {
+  color: #5b79a2;
+  font-weight: 700;
+}
