@@ -1,0 +1,80 @@
+<!---
+  Full Name: Jeffrey Chan
+  Date: September 14th, 2023
+  File: index.html
+  Description: HTML for Dynamic Multiplication Table
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/globals.css" />
+    <script src="./javascript/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Dynamic Multiplication Table!</h1>
+
+    <div class="app-wrapper">
+      <form id="form">
+        <div class="form__item">
+          <label for="start-row">Starting Row</label>
+          <input
+            required
+            type="number"
+            id="form__input--start-row"
+            name="start-row"
+            placeholder="Enter the starting row"
+            min="-100"
+          />
+        </div>
+
+        <div class="form__item">
+          <label for="end-row">Ending Row</label>
+          <input
+            required
+            type="number"
+            id="form__input--end-row"
+            name="end-row"
+            placeholder="Enter the ending row"
+            max="100"
+          />
+        </div>
+        <div class="form__item">
+          <label for="start-col">Starting Column</label>
+          <input
+            required
+            type="number"
+            id="form__input--start-col"
+            name="start-col"
+            placeholder="Enter the starting column"
+            min="-100"
+          />
+        </div>
+        <div class="form__item">
+          <label for="end-col">Ending Column</label>
+          <input
+            required
+            type="number"
+            id="form__input--end-col"
+            name="end-col"
+            placeholder="Enter the ending column"
+            max="100"
+          />
+        </div>
+
+        <button type="submit">submit</button>
+      </form>
+
+      <div id="multiplication-table-wrapper"></div>
+    </div>
+  </body>
+</html>
