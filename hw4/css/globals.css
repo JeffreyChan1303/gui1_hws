@@ -1,0 +1,73 @@
+/*
+  Full Name: Jeffrey Chan
+  Date: November 14th, 2023
+  File: globals.css
+  Description: CSS Styles for the Dynamic Multiplication table
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+/* apply the layout to the application */
+.app-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  overflow-wrap: normal;
+  flex-wrap: wrap;
+}
+/* create the styleing for the form */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  padding: 16px;
+  border: black solid 1px;
+  border-radius: 5px;
+  gap: 12px;
+  background-color: white;
+}
+.form__item {
+  display: flex;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: right;
+}
+
+/* change styles of the error messages from Jquery validation plugin */
+label.error {
+  width: 100%;
+  text-align: right;
+  font-size: 0.75rem;
+  color: red;
+  margin-top: 0.25rem;
+}
+
+#multiplication-table-wrapper {
+  overflow: scroll;
+  max-height: 50vh;
+}
+
+/* add contrasting color and make headers stick when scrolled */
+th {
+  color: white;
+  background-color: black;
+  position: sticky;
+}
+thead th {
+  top: 0;
+}
+tbody th {
+  left: 0;
+}
+th,
+.table__cell {
+  text-align: center;
+  padding: 2px 4px;
+}
+tbody {
+  overflow: scroll;
+}

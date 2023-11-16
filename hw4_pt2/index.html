@@ -1,0 +1,112 @@
+<!---
+  Full Name: Jeffrey Chan
+  Date: November 14th, 2023
+  File: index.html
+  Description: HTML for Dynamic Multiplication Table
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"
+      defer
+    ></script>
+
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/globals.css" />
+    <script>
+      $(function () {
+        $('#tabs-wrapper').tabs();
+      });
+    </script>
+
+    <script src="./javascript/script.js" defer></script>
+  </head>
+  <body>
+    <h1>Dynamic Multiplication Table!</h1>
+
+    <!-- test bench for th etabs!! -->
+    <div id="tabs-wrapper">
+      <ul class="tab-header__tab-input">
+        <li>
+          <a href="#app-wrapper">Inputs</a>
+        </li>
+      </ul>
+
+      <div id="app-wrapper" class="app-wrapper">
+        <form id="form">
+          <div class="form__item">
+            <label for="start-row">Starting Row</label>
+            <input
+              type="number"
+              id="form__input--start-row"
+              name="start-row"
+              placeholder="Enter the starting row"
+              min="-100"
+            />
+            <div class="slider slider-start-row"></div>
+          </div>
+
+          <div class="form__item">
+            <label for="end-row">Ending Row</label>
+            <input
+              required
+              type="number"
+              id="form__input--end-row"
+              name="end-row"
+              placeholder="Enter the ending row"
+              max="100"
+            />
+            <div class="slider slider-end-row"></div>
+          </div>
+          <div class="form__item">
+            <label for="start-col">Starting Column</label>
+            <input
+              required
+              type="number"
+              id="form__input--start-col"
+              name="start-col"
+              placeholder="Enter the starting column"
+              min="-100"
+            />
+            <div class="slider slider-start-col"></div>
+          </div>
+          <div class="form__item">
+            <label for="end-col">Ending Column</label>
+            <input
+              required
+              type="number"
+              id="form__input--end-col"
+              name="end-col"
+              placeholder="Enter the ending column"
+              max="100"
+            />
+            <div class="slider slider-end-col"></div>
+          </div>
+
+          <button type="submit">submit</button>
+        </form>
+
+        <div class="multiplication-table-wrapper">
+          <div id="mult-table-0"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
