@@ -1,0 +1,52 @@
+<!--
+Author: Jeffrey Chan
+Email: jeffrey_chan2@student.uml.edu
+Created: 12/10/2023
+File Description: HTML for hw5
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Jeffrey's Scrabble</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+      integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <script type="module" defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <h1>Scrabble Game!!</h1>
+
+    <div>
+      <h2 id="current-score">Score: 0</h2>
+      <h2 id="current-word">Word:</h2>
+    </div>
+    <div id="word-validation"></div>
+    <div class="scrabble-board-wrapper">
+      <img class="scrabble-board-img pure-img" src="./graphics_data/Scrabble_Board_OneLine.png" />
+      <div id="scrabble-board-overlay-wrapper"></div>
+    </div>
+    <div class="buttons-wrapper">
+      <button id="next-word-button" class="pure-button pure-button-primary">Next Word</button>
+      <button id="restart-button" class="pure-button pure-button-primary">Restart</button>
+    </div>
+    <div class="tile-holder-wrapper">
+      <img class="tile-holder-img pure-img" src="./graphics_data/scrabble-tile-holder-406774_640.png" />
+      <div id="user-tile-wrapper" />
+    </div>
+  </body>
+</html>
